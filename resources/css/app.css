@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playfair+Display:wght@100..900&display=swap');
+@import 'tailwindcss';
+
+@plugin "@tailwindcss/forms";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@utility scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@utility h-screen-safe {
+    height: 100vh;
+    height: 100dvh;
+    height: var(--app-vh, 100dvh);
+}
+
+@utility min-h-screen-safe {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: var(--app-vh, 100dvh);
+}
+
+@theme {
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-headline: 'Playfair Display', ui-serif, Georgia, serif;
+
+    --text-headline-xl: 48px;
+    --text-headline-xl--line-height: 56px;
+    --text-headline-xl--font-weight: 700;
+    --text-headline-xl--letter-spacing: -0.02em;
+    --text-headline-lg: 32px;
+    --text-headline-lg--line-height: 40px;
+    --text-headline-lg--font-weight: 700;
+    --text-headline-md: 24px;
+    --text-headline-md--line-height: 32px;
+    --text-headline-md--font-weight: 600;
+    --text-body-lg: 18px;
+    --text-body-lg--line-height: 28px;
+    --text-body-lg--font-weight: 400;
+    --text-body-md: 16px;
+    --text-body-md--line-height: 24px;
+    --text-body-md--font-weight: 400;
+    --text-body-sm: 14px;
+    --text-body-sm--line-height: 20px;
+    --text-body-sm--font-weight: 400;
+    --text-label-bold: 12px;
+    --text-label-bold--line-height: 16px;
+    --text-label-bold--font-weight: 600;
+    --text-label-bold--letter-spacing: 0.05em;
+
+    --color-surface: #fcf9f8;
+    --color-surface-dim: #dcd9d9;
+    --color-surface-bright: #fcf9f8;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #f6f3f2;
+    --color-surface-container: #f0eded;
+    --color-surface-container-high: #eae7e7;
+    --color-surface-container-highest: #e5e2e1;
+    --color-on-surface: #1b1c1c;
+    --color-on-surface-variant: #504442;
+    --color-inverse-surface: #303030;
+    --color-inverse-on-surface: #f3f0ef;
+    --color-outline: #827472;
+    --color-outline-variant: #d3c3c0;
+    --color-surface-tint: #745853;
+    --color-primary: #271310;
+    --color-on-primary: #ffffff;
+    --color-primary-container: #3e2723;
+    --color-on-primary-container: #ae8d87;
+    --color-inverse-primary: #e3beb8;
+    --color-secondary: #655d5a;
+    --color-on-secondary: #ffffff;
+    --color-secondary-container: #ece0dc;
+    --color-on-secondary-container: #6b6360;
+    --color-tertiary: #001e05;
+    --color-on-tertiary: #ffffff;
+    --color-tertiary-container: #00350f;
+    --color-on-tertiary-container: #5fa364;
+    --color-error: #ba1a1a;
+    --color-on-error: #ffffff;
+    --color-error-container: #ffdad6;
+    --color-on-error-container: #93000a;
+    --color-primary-fixed: #ffdad4;
+    --color-primary-fixed-dim: #e3beb8;
+    --color-on-primary-fixed: #2b1613;
+    --color-on-primary-fixed-variant: #5b403c;
+    --color-secondary-fixed: #ece0dc;
+    --color-secondary-fixed-dim: #cfc4c0;
+    --color-on-secondary-fixed: #201a18;
+    --color-on-secondary-fixed-variant: #4c4542;
+    --color-tertiary-fixed: #abf4ac;
+    --color-tertiary-fixed-dim: #90d792;
+    --color-on-tertiary-fixed: #002107;
+    --color-on-tertiary-fixed-variant: #07521d;
+    --color-background: #fcf9f8;
+    --color-on-background: #1b1c1c;
+    --color-surface-variant: #e5e2e1;
+
+    --spacing-base: 8px;
+    --spacing-gutter: 24px;
+    --spacing-section-gap: 80px;
+    --spacing-container-padding-mobile: 16px;
+    --spacing-container-padding-desktop: 48px;
+
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1.5rem;
+
+    --shadow-soft: 0 8px 24px rgba(39, 19, 16, 0.06);
+}
